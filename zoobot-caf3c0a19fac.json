@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "zoobot-224010",
+  "private_key_id": "caf3c0a19facee3b6fd1f673888568de64b14bf1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3bhk9FRt8TaaI\nWmK20T9XhVBMt7s6JonXUQYthXlKrKbzrjlAeOh68GA6Zsf7tso/tYOnQlo3IhRy\nA6AOPhVXxs3JgwzdPjjd/zyvxWRnAZnfG04PV4v7G9mciou0McyR+mfwKkqTtRsT\n6rZoCm98GMMWYuSmD5NzmrS887QewnqzkseHBgH+weEF3iAiq3KOI+FI/jq4jNr5\neJhGkC5PkRJnkjf3wptbAEW6hGPfz4o/2LVGHye1bdUxP4jSWH/3PSS5iGB1+gqY\nMxJKUsD/4JwjpuxEb52/SUbsDo3bvU1bOwKqUOS6/wrJd1hmVN+Pz5X8Bu0AEaz4\nwRBHl6yzAgMBAAECggEAA6+luDGFZOEWmKTgWPYphLO8Il6K16dQm9AYBLAq+NIx\nZLI6mk4TtezAskvAdxF8TP1z0NengnYf3Q6vl7mtqh7nocYNayDF+cgYSxv3YY6J\nrg8ZaXuD557up5OtLQjXKJPUpOHkr8Uy7xqHYd3b0a2Ztgh0udWUS/1u5mErXHbZ\nT7obeA1MLJrUDpnil2qtLgGHDDXSjnLULR37KOt3sBR+iRyKPDcy5H3mZ0RAocVI\nRFRvqejQFRLSXVG/ZAK7dhTqmk5W4H0CmU0f6RVf/nHGL/QH8w8txAWaaaVkk2hv\nq1eAJQx+7wITXGQulBWlWjmsjvKvwbwvUYtsRN3POQKBgQDnxg8Vd7UBaxICWZ46\nUTSf93UgDFRz9q/bUG1i+CUKt5xbWe7I0UjJPpIqbmZv98LASSAlvsgwJTA+tt6p\nDJyBsng2eCB8J8ZOcVzODqnVTf9lq4QhP6mRUdDa+UTIcv1Fz1Ndi6Qn1RLavx+p\nqjbKEtqBfZSeDdnUeA8WrU2FFwKBgQDKmm6qDyrcDV59ZhbYiqhGHNzQD5eMx2zp\n5nAJyMG3Bb7yOMa+gVykfdr6/2dBEj9SGyDADolQOS0stQ9KVxuJe1EkDkt6AzFi\nrQOEJNycbCRYifn97c/NNvjSukLT1QShih9We6iox2cowe1cp3gxHYLTcx/yuj9q\niRqWmz8OxQKBgEz/U0uCdTN/aoA1XYdqKt1pzBNVhUjxDwMA+RYD8epZjSwb+GPm\ngxO4Ib7O5mEUIjLXGELx2neEIz7yaY4njmbX72/JAKG+ZPbyWi5qWKlwPAR+smqJ\nR7/rOkNExEEDUni6o6tUFLjW5GifTdmDnqgLE2QpYBIR7+fR6tFRyYsJAoGBALAS\nlBgQxGOm7rY2EaawodsE3FWpJ0C+U4XWsQmfwdIIGVCyTO5kyBlgEv3NFnPzorn9\nP3IJcAYbGope8+HcX98UH4khLzDjM3kY+RRPYLZEOTYE+xBWKyCiJI4mN0uXNcYZ\nnnBvWT0MxjciieDa3dZ5WiffRiWQ/OneKxA17RAtAoGAPhMy8jiHO8daUby3C/sG\nInlELJzAY+ZeNt5JRRaiu8222vb6rKcNleMXt1oYfbklKH5OA8uvOd2Ei4zo05RY\nbsSSq0uehxJxeXzWWWWRUQzMW3pJxqcwBWDoN/kDbqUuhXkY5g731tJ1xt3/vF0e\nz3g1WjIPIxUHL0XUn5z5BnY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech-to-text-service-account@zoobot-224010.iam.gserviceaccount.com",
+  "client_id": "117809334541226421053",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-to-text-service-account%40zoobot-224010.iam.gserviceaccount.com"
+}
