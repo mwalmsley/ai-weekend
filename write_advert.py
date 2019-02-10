@@ -7,18 +7,20 @@ def aspects_to_advert(aspects):
     educations = [x for x in aspects if isinstance(x, Education)]  # sad s
     qualities = [x for x in aspects if isinstance(x, Quality)]  # sad s
 
+    print("\n\nHere's your job advert:")
+
     if len(skills) > 0:
-        print('Skills: \n')
+        print('\nSkills')
         for aspect in skills:
             print('- {}'.format(aspect.representation))
 
     if len(experiences) > 0:
-        print('\nExperience:')
+        print('\nExperience')
         for aspect in experiences:
             print('- {}'.format(aspect.representation))
 
     if len(educations) > 0:
-        print('\nEducation:')
+        print('\nEducation')
         for aspect in educations:
             print('- {}'.format(aspect.representation))
 
