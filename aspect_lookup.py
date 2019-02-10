@@ -1,3 +1,5 @@
+# word bank to look for keywords
+
 from collections import namedtuple
 import itertools
 
