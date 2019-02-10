@@ -17,7 +17,7 @@ from aspect_lookup import all_aspects
 RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'zoobot-caf3c0a19fac.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'gcloud_credentials.json'
 
 
 class MicrophoneStream(object):
