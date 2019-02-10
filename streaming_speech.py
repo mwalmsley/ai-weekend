@@ -17,7 +17,10 @@ from aspect_lookup import all_aspects
 RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'gcloud_credentials.json'
+
+credentials_loc = 'zoobot-224010.json'
+assert os.path.isfile(credentials_loc)
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_loc
 
 
 class MicrophoneStream(object):
@@ -142,7 +145,7 @@ def listen_print_loop(responses):
 
         num_chars_printed = 0
 
-        finish_keywords = ['thats all', "that's all", "i'm done", "that's it"]
+        finish_keywords = ['thats all', "that's all", "i'm done", "that's it", "thank", "thanks"]
         if (time.time() > start_time + 45) or (any([x in transcript for x in finish_keywords])):
             return identified_aspects
 

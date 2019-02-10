@@ -28,6 +28,9 @@ class Quality(Aspect):
 class Education(Aspect):
     pass
 
+class Title(Aspect):
+    pass
+
 
 qualities = [
     Quality(
@@ -53,7 +56,7 @@ qualities = [
     Quality(
         key='adaptable',
         representation='Adaptable',
-        keywords=['adaptable', 'adapt', 'can adjust', 'flexible']
+        keywords=['adaptable', 'adapt', 'can adjust', 'flexible', 'different areas']
     )
 ]
 
@@ -64,7 +67,7 @@ skills = [
         keywords=['speaker', 'presentation', 'talk', 'talking']
     ),
     Skill(
-        key='python',
+        key='python-desirable',
         representation='Exposure to Python is helpful, but not required',
         keywords=['python']
     )
@@ -93,12 +96,20 @@ educations = [
     )
 ]
 
+titles = [
+    Title(
+        key='strategist',
+        representation='Strategist',
+        keywords=['strategist'])
+]
+
 # really ugly
 all_aspects = []
 all_aspects.extend(qualities)
 all_aspects.extend(educations)
 all_aspects.extend(experiences)
 all_aspects.extend(skills)
+all_aspects.extend(titles)
 
 def get_aspects(text):
     aspects = []
