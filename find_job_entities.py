@@ -19,5 +19,5 @@ if __name__ == '__main__':
     print('\nAspects:')
     aspects = get_aspects(text)
     print(aspects)
-    print('\nJob Advert... ')
+    print('\n')
     aspects_to_advert(aspects)
