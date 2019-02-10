@@ -33,12 +33,27 @@ qualities = [
     Quality(
         key='client_driven',
         representation='Driven to create client value',
-        keywords=['client driven', 'client value', 'business value', 'value for clients']
+        keywords=['client driven', 'client value', 'business value', 'value for clients', 'drive clients', 'clients']
     ),
     Quality(
         key='responsible',
         representation='Highly responsible',
-        keywords=['highly responsible, responsible', 'dependable', 'reliable']
+        keywords=['highly responsible, responsible', 'dependable', 'reliable', 'rely on']
+    ),
+    Quality(
+        key='high-paced',
+        representation='Enjoys working in a high-paced environment',
+        keywords=['paced', 'high-paced', 'fast', 'quick', 'witted']
+    ),
+    Quality(
+        key='creative',
+        representation='Able to develop creative and intelligent solutions',
+        keywords=['creative']
+    ),
+    Quality(
+        key='adaptable',
+        representation='Adaptable',
+        keywords=['adaptable', 'adapt', 'can adjust', 'flexible']
     )
 ]
 
@@ -46,7 +61,12 @@ skills = [
     Skill(
         key='oral_communication',
         representation='Strong presentation skills. Able to communicate complex information clearly',
-        keywords=['speaker', 'presentation', 'talk']
+        keywords=['speaker', 'presentation', 'talk', 'talking']
+    ),
+    Skill(
+        key='python',
+        representation='Exposure to Python is helpful, but not required',
+        keywords=['python']
     )
 ]
 
@@ -54,24 +74,30 @@ skills = [
 experiences = [
     Experience(
         key='industry',
-        representation='Experience in industry',
-        keywords=['industry experience', 'worked in industry']
+        representation='Worked in industry',
+        keywords=['industry experience', 'worked in industry', 'industry insider']
     )
 ]
 
 
-education = [
+educations = [
     Education(
         key='any_degree',
         representation='University degree in any subject',
         keywords=['any degree', 'university degree']
+    ),
+    Education(
+        key='certified_accountant',
+        representation='Certified Public Accountant (CPA)',
+        keywords=['accountant', 'certified accountant', 'certified']
     )
 ]
 
 # really ugly
 all_aspects = []
 all_aspects.extend(qualities)
-all_aspects.extend(education)
+all_aspects.extend(educations)
+all_aspects.extend(experiences)
 all_aspects.extend(skills)
 
 def get_aspects(text):
@@ -81,3 +107,11 @@ def get_aspects(text):
             if keyword in text:
                 aspects.append(aspect)
     return aspects
+
+
+def all_aspects_are_filled(aspects):
+    skills = [aspect for aspect in aspects if isinstance(aspect, Skill)]
+    experience = [aspect for aspect in aspects if isinstance(aspect, Experience)]
+    qualities = [aspect for aspect in aspects if isinstance(aspect, Quality)]
+    educations = [aspect for aspect in aspects if isinstance(aspect, Education)]
+    return skills and experience and qualities and educations

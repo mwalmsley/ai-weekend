@@ -113,7 +113,7 @@ def listen_print_loop(responses):
             continue
 
         # Display the transcription of the top alternative.
-        transcript = result.alternatives[0].transcript
+        transcript = result.alternatives[0].transcript.lower()
 
         # Display interim results, but with a carriage return at the end of the
         # line, so subsequent lines will overwrite them.
@@ -133,7 +133,7 @@ def listen_print_loop(responses):
             print(transcript + overwrite_chars)
 
             # identify aspects (in latest response?)
-            new_aspects = [aspect for aspect in all_aspects for keyword in aspect.keywords if keyword in transcript]
+            new_aspects = set([aspect for aspect in all_aspects for keyword in aspect.keywords if keyword in transcript])
             if new_aspects:
                 print([aspect.key.upper() for aspect in new_aspects])
                 for aspect in new_aspects:
@@ -142,11 +142,12 @@ def listen_print_loop(responses):
 
         num_chars_printed = 0
 
-        if time.time() > start_time + 10:
+        finish_keywords = ['thats all', "that's all", "i'm done", "that's it"]
+        if (time.time() > start_time + 45) or (any([x in transcript for x in finish_keywords])):
             return identified_aspects
 
 
-def aspects_from_stream():
+def aspects_from_stream(message):
     language_code = 'en-US'
 
     client = speech.SpeechClient()
@@ -157,11 +158,12 @@ def aspects_from_stream():
     streaming_config = types.StreamingRecognitionConfig(
         config=config,
         interim_results=True)
-
     with MicrophoneStream(RATE, CHUNK) as stream:
         audio_generator = stream.generator()
         requests = (types.StreamingRecognizeRequest(audio_content=content)
                     for content in audio_generator)
+
+        print(message)
 
         responses = client.streaming_recognize(streaming_config, requests)
 
@@ -171,7 +173,7 @@ def aspects_from_stream():
 
 
 def main():
-    aspects = aspects_from_stream()
+    aspects = aspects_from_stream('welcome message')
     print('Found: {}'.format(aspects))
 
 if __name__ == '__main__':

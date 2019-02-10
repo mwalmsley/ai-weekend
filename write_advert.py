@@ -26,6 +26,6 @@ def aspects_to_advert(aspects):
 
 
     if len(qualities) > 0:
-        print('\nQuality:')
+        print('\nQualities')
         for aspect in qualities:
             print('- {}'.format(aspect.representation))
