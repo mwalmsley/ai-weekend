@@ -17,3 +17,6 @@ http://people.csail.mit.edu/hubert/pyaudio/
 `sudo apt-get install python-pyaudio python3-pyaudio`
 
 `pip install pyaudio`
+
+You will also need the Google Cloud SDK and of course, a Google Cloud account. The credentials saved to the repo have now been deactivated - you will need to make a new Service Account, and update the credentials json.
+https://cloud.google.com/iam/docs/understanding-service-accounts
