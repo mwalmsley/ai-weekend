@@ -18,7 +18,7 @@ RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
 
 
-credentials_loc = 'zoobot-224010.json'
+credentials_loc = 'zoobot-224010-46e5a33a0f12.json'
 assert os.path.isfile(credentials_loc)
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_loc
 
